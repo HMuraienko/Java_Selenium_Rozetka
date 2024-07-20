@@ -9,16 +9,20 @@ public class signInForm extends BaseTest {
     public signInForm(WebDriver driver) {
         this.driver = driver;
     }
-    public WebElement signInFormHeader (){
+
+    public WebElement signInFormHeader() {
         return driver.findElement(By.xpath("//div[@class = 'modal__header']"));
     }
-    public WebElement signInFields (){
+
+    public WebElement signInFields() {
         return driver.findElement(By.xpath("//input[@id = 'phone']"));
     }
-    public WebElement submitButton (){
+
+    public WebElement submitButton() {
         return driver.findElement(By.xpath("//button[@type = 'submit']"));
     }
-    public WebElement closeButton(){
+
+    public WebElement closeButton() {
         return driver.findElement(By.xpath("//button[@class = 'modal__close ng-star-inserted']"));
     }
 

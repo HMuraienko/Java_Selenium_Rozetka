@@ -14,10 +14,12 @@ public class sideMenu extends BaseTest {
         return driver.findElement(By.xpath("//div[@class = 'side-menu__header ng-star-inserted']"));
 
     }
-    public WebElement helpCenter(){
+
+    public WebElement helpCenter() {
         return driver.findElement(By.xpath("//a[@class = 'button button--medium side-menu__button ng-star-inserted']"));
     }
-    public WebElement reminderPopUpCloseButton(){
+
+    public WebElement reminderPopUpCloseButton() {
         return driver.findElement(By.xpath("//button[@class = 'close']"));
     }
 }

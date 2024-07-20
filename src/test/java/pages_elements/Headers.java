@@ -19,6 +19,7 @@ public class Headers extends BaseTest {
         return driver.findElement(By.xpath("//img[@alt = 'Rozetka Logo']"));
 
     }
+
     public WebElement homeButtonHelpCenter() {
         return driver.findElement(By.xpath("//div[@class = 'd-flex justify-content-between align-items-center header-row']"));
 
@@ -48,6 +49,7 @@ public class Headers extends BaseTest {
         return driver.findElement(By.xpath("//button[@class = 'button button--link sub-lg lang__button']"));
 
     }
+
     public WebElement changeLanguageButtonToRu() {
         return driver.findElement(By.xpath("//button[@class = 'button button_color_white button_size_medium dropdown-css__control lang__menu-control js-rename-wishlist-title']"));
 

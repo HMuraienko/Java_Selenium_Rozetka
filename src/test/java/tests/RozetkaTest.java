@@ -1,12 +1,10 @@
 package tests;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 import pages_elements.Headers;
 import pages_elements.sideMenu;
 import pages_elements.signInForm;
-
 
 import static org.testng.AssertJUnit.assertEquals;
 
@@ -27,7 +25,7 @@ public class RozetkaTest extends BaseTest {
         wait.until(ExpectedConditions.elementToBeClickable(sidemenu.helpCenter())).click();
         wait.until(ExpectedConditions.elementToBeClickable(headers.homeButtonHelpCenter())).click();
     }
-    
+
     @Test
     public void testSearchFunctionality() {
         Headers headers = new Headers(driver);
@@ -39,13 +37,13 @@ public class RozetkaTest extends BaseTest {
     }
 
     @Test
-    public void SignInTest(){
+    public void SignInTest() {
         Headers headers = new Headers(driver);
         signInForm signin = new signInForm(driver);
         headers.signInButton().click();
-        try{
+        try {
             Thread.sleep(2000);
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
         wait.until(ExpectedConditions.visibilityOf(signin.signInFormHeader()));
@@ -54,13 +52,13 @@ public class RozetkaTest extends BaseTest {
         signin.submitButton().click();
         signin.closeButton().click();
     }
+
     @Test
-    public void checkAbilityToChangeLanguageFromUaToRu(){
+    public void checkAbilityToChangeLanguageFromUaToRu() {
         Headers headers = new Headers(driver);
         headers.changeLanguageButton().click();
         headers.changeLanguageButtonToRu().click();
     }
-
 
 
 }
